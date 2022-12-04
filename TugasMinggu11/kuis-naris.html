@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kuis Mas Naris</title>
+</head>
+<body>
+    <h3>Daftar Mahasiswa Kampus Gaul</h3>
+    <form action="javascript:void(0);" method="post" onsubmit="apl.Add()">
+        <input type="text" id="tambahData" placeholder="Tambahkan Nama">
+        <input type="submit" value="+">
+    </form>
+    <div id="counter">
+        
+    </div>
+    <table border="20" bordercolor="red">
+        <thead>
+                <td>Nama MHS</td>
+            </tr>
+        </thead>
+        <tbody id="daftarMhs">
+            <tr>
+                5 Mahasiswa    
+            </tr>
+            <tr>
+                <td>Naris</td>
+            </tr>
+            <tr>
+                <td>Hafidz</td>
+            </tr>
+            <tr>
+                <td>Messi</td>
+            </tr>
+            <tr>
+                <td>Ronaldo</td>
+            </tr>
+            <tr>
+                <td>Fahrezi</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <script >
+        var apl = new funtion();
+        this.el = document.getElementById('daftarMhs');
+
+            this.mhs = ['Naris','Hafidz','Messi','Ronaldo','Fahrezi'];
+
+                this.barisAll = function() {
+                    var data = '';
+                    if(this.mhs.length > 0) {
+                        for(i = 0; i < this.mhs.length; i++) {
+                            data += '<tr>';
+                            data += '<td>' + this.mhs[i] + ' <input type="button" value="Del">';
+                            data += '</td></tr>'; 
+                        }
+                    }
+                    this.Count(this.mhs.length);
+                    return this.el.innerHTML = data;
+                };
+
+                this.Count = function(){
+                    
+                    alert("tambah");
+                }
+                apl.barisAll;
+    </script>
+</body>
+</html>
